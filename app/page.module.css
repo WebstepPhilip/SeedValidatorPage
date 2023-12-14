@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
   min-height: 100vh;
 }
 
@@ -46,7 +45,7 @@
     padding:6rem;
   }
   .grid {
-    grid-template-columns:1fr 3fr 1fr;
+    grid-template-columns:1fr 1fr 1fr;
   }
   .left{
     

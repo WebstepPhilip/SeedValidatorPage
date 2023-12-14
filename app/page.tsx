@@ -5,10 +5,10 @@ import Seed from "./seed";
 export default function Home() {
   return (
     <main className={styles.main}>
-       <div className={styles.banner}>
+       <div className={styles.banner} style={{transform:"scale(150%)"}}>
           <img src="https://www.webstep.no/wp-content/uploads/2022/04/Webstep-logo-sort-RGB.png"></img>
         </div>
-      <div className={styles.grid}>
+      <div className={styles.grid} style={{width: "fit-content", transform:"scale(150%)"}}>
         <aside className={styles.left}>
         <img src="https://www.freeiconspng.com/uploads/christmas-tree-icon-png-0.png"/>
         </aside>
