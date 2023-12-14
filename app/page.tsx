@@ -9,10 +9,10 @@ export default function Home() {
       <Head>
         <title>Webstep Julekalender 2023</title>
       </Head>
-       <div className={styles.banner} style={{transform:"scale(150%)"}}>
+       <div className={styles.banner}>
           <img src="https://www.webstep.no/wp-content/uploads/2022/04/Webstep-logo-sort-RGB.png"></img>
         </div>
-      <div className={styles.grid} style={{width: "fit-content", transform:"scale(150%)"}}>
+      <div className={styles.grid} style={{width: "fit-content"}}>
         <aside className={styles.left}>
         <img src="https://www.freeiconspng.com/uploads/christmas-tree-icon-png-0.png"/>
         </aside>
