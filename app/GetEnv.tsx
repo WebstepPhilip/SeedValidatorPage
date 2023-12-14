@@ -1,4 +1,4 @@
-export function useEnv(index:number): string {
+export function GetEnv(index:number): string {
     switch(index) {
         case 0:
             return process.env.NEXT_PUBLIC_SEEDONE as string;

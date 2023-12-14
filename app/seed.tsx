@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import styles from "./seed.module.css";
-import { useEnv } from "./useEnv";
+import { GetEnv } from "./GetEnv";
 
 interface SeedProps {
   index: number;
@@ -12,7 +12,7 @@ const Seed = (props: SeedProps) => {
   const [valid, setValid] = useState<boolean>(false);
 
   const getSeedName = () => {
-    return useEnv(props.index);
+    return GetEnv(props.index);
   };
   const validate = () => {
     if (input.toLowerCase() === getSeedName()) {
