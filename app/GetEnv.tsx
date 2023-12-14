@@ -1,3 +1,5 @@
+'use server'
+
 export function GetEnv(index:number): string {
     switch(index) {
         case 0:
