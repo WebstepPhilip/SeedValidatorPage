@@ -1,13 +1,14 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Seed from "./seed";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <head>
+      <Head>
         <title>Webstep Julekalender 2023</title>
-      </head>
+      </Head>
        <div className={styles.banner} style={{transform:"scale(150%)"}}>
           <img src="https://www.webstep.no/wp-content/uploads/2022/04/Webstep-logo-sort-RGB.png"></img>
         </div>
