@@ -2,33 +2,32 @@
 import React, { useEffect, useState } from "react";
 import styles from "./seed.module.css";
 import { GetEnv } from "./GetEnv";
+import useSWR from "swr";
 
 interface SeedProps {
   index: number;
 }
 
+const fetcher = (url: string) => fetch(url).then(r => r.json())
+
 const Seed = (props: SeedProps) => {
   const [input, setInput] = useState<string>("");
   const [valid, setValid] = useState<boolean>(false);
+  const {data, error, isLoading} = useSWR(`/api/validator?id=${props.index}&answer=${input}`, fetcher)
 
-  const getSeedName = () => {
-    return GetEnv(props.index);
-  };
   const validate = () => {
-    if (input.toLowerCase() === getSeedName()) {
-      return true;
-    } else {
-      return false;
-    }
+    return data.valid;
   };
 
   useEffect(() => {
+    if (data) {
     if (validate()) {
       setValid(true);
     } else {
       setValid(false);
     }
-  }, [input]);
+}
+  }, [data]);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.currentTarget.value);

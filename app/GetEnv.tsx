@@ -1,4 +1,3 @@
-'use server'
 
 export function GetEnv(index:number): string {
     switch(index) {
