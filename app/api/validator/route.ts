@@ -9,13 +9,10 @@ export async function GET(request: Request) {
     if (id) {
     value = parseInt(id);
     }
-    console.log(value);
     let rightAnswer = "";
     if (!isNaN(value) && value < 12) {
     rightAnswer = GetEnv(value);
     }
-    console.log(rightAnswer);
-    console.log(input);
     if (rightAnswer === input?.toLowerCase()) {
         return Response.json({valid:true})
     } else {
