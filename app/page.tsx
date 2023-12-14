@@ -5,6 +5,9 @@ import Seed from "./seed";
 export default function Home() {
   return (
     <main className={styles.main}>
+      <head>
+        <title>Webstep Julekalender 2023</title>
+      </head>
        <div className={styles.banner} style={{transform:"scale(150%)"}}>
           <img src="https://www.webstep.no/wp-content/uploads/2022/04/Webstep-logo-sort-RGB.png"></img>
         </div>
